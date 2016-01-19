@@ -30,7 +30,6 @@ public class MyElipse extends Application {
         Scene stseen = new Scene(pane, 500, 500);
         lava.setScene(stseen);
 
-
         Ellipse punane = new Ellipse(55, 78);
         punane.setCenterX(160);
         punane.setCenterY(160);

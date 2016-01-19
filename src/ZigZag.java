@@ -17,6 +17,7 @@ public class ZigZag {
             matrix[i - 1][j - 1] = element;
             if ((i + j) % 2 == 0) {
                 // Even stripes
+
                 if (j < size)
                     j++;
                 else

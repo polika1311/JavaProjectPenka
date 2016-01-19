@@ -37,7 +37,8 @@ public class MyCircle extends Application {
             lava.setScene(stseen);
             Scanner sc =new Scanner(System.in);
            Double tt = sc.nextDouble();
-            Circle punane= new Circle(tt);
+
+        Circle punane= new Circle(tt);
             punane.setCenterX(150);
             punane.setCenterY(200);
             pane.getChildren().add(punane);

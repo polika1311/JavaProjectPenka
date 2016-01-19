@@ -18,6 +18,7 @@ public class Matriks1 {
             }
             return matrix;
         }
+
     public static void printMatrix(int[][] matrix){
             for (int[] row : matrix){
                 for (int col : row){
