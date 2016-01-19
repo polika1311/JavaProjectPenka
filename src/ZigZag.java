@@ -8,7 +8,6 @@ public class ZigZag {
         printMatrix(matrix);
 
     }
-
     private static int[][] generateMatrix(final int size) {
 
         int[][] matrix = new int[size][size];

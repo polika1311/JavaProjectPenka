@@ -52,4 +52,3 @@ public class MyElipse extends Application {
 
 
 
-
