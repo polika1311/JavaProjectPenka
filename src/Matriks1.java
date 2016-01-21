@@ -4,25 +4,32 @@
 public class Matriks1 {
         public static void main(String[] args){
 
-            int[][] matrix = generateMatrix(6, 6);
 
-            printMatrix(matrix);
+
+            String[][] trrr = {
+                    {"1", "2", "3", "4"},
+                    {"2", "2", "3", "4"},
+                    {"3", "2", "3", "4"},
+                    {"4", "2", "3", "4"}};
+
+            printMatrix(trrr);
+
         }
 
         public static int[][] generateMatrix(int width, int heigth){
             int[][] matrix = new int[width][heigth];
             for(int i = 0; i < width; i++){
                 for (int j = 0; j < heigth; j++){
-                    matrix[i][j] = (int) (Math.random()*9);
+                    matrix[i][j] = (int) (Math.random()*6+1);
                 }
             }
             return matrix;
         }
 
-    public static void printMatrix(int[][] matrix){
-            for (int[] row : matrix){
-                for (int col : row){
-                    System.out.printf("%1d ", col);
+    public static void printMatrix(String[][] matrix){
+            for (String[] row : matrix){
+                for (String col : row){
+                    System.out.printf("%s ", col);
                 }
                 System.out.println();
             }
