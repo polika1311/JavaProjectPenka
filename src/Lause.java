@@ -1,6 +1,9 @@
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -25,10 +28,17 @@ public class Lause extends Application{
         GridPane grid = new GridPane();
         Scene scene = new Scene(grid, 200, 300);
 
-        Scanner sc =new Scanner(System.in);
-        String lause=sc.nextLine();
-        label3.setText(lause);
-        grid.getChildren().add(label3);
+        TextField inputText = new TextField();
+        inputText.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                label3.setText(newValue);
+            }
+        });
+
+
+        grid.add(inputText, 0, 0);
+        grid.add(label3, 0, 1);
         lava.setScene(scene);
         lava.show();
     }
