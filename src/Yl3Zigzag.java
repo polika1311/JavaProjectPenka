@@ -3,6 +3,7 @@
  */
 public class Yl3Zigzag {
     public static void main(String[] args) {
+
         int multi = 0;
         for (int i = 0; i < 100; i++) {
 

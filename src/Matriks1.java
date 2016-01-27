@@ -17,10 +17,10 @@ public class Matriks1 {
         }
 
         public static int[][] generateMatrix(int width, int heigth){
-            int[][] matrix = new int[width][heigth];
+            int[][] matrix = new int[27][27];
             for(int i = 0; i < width; i++){
                 for (int j = 0; j < heigth; j++){
-                    matrix[i][j] = (int) (Math.random()*6+1);
+                    matrix[i][j] = (int) (Math.random()*27);
                 }
             }
             return matrix;

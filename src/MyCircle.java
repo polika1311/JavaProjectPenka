@@ -44,19 +44,36 @@ public class MyCircle extends Application {
         punane.setCenterX(150);
         punane.setCenterY(200);
 
-        javafx.scene.control.TextField inputText = new javafx.scene.control.TextField();
-        inputText.textProperty().addListener(new ChangeListener<String>() {
+        Slider slider = new Slider(0, 1, 0.5);
+        pane.getChildren().add(slider);
+        slider.setMin(0);
+        slider.setMax(200);
+
+        slider.valueProperty().addListener(new ChangeListener<Number>() {
+
             @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                int value = Integer.parseInt(newValue);
-                if (value <= 150 && value > 0)
-                    punane.setRadius(value);
+            public void changed(ObservableValue<? extends Number> ov,
+                                Number old_val, Number new_val) {
+
+
+                punane.setRadius(new_val.doubleValue());
+
             }
         });
 
-        pane.getChildren().add(inputText);
+        //  javafx.scene.control.TextField inputText = new javafx.scene.control.TextField();
+       // inputText.textProperty().addListener(new ChangeListener<String>() {
+         //   @Override
+           // public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+             //   int value = Integer.parseInt(newValue);
+              //  if (value <= 150 && value > 0)
+         //           punane.setRadius(value);
+       //     }
+     //   });
+
+       // pane.getChildren().add(inputText);
         pane.getChildren().add(punane);
-        punane.setFill(Color.RED);
+        punane.setFill(Color.YELLOW);
         lava.show();
     }
 
