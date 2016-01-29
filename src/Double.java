@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Double {
     public static void main(String[] args) {
         System.out.println(result (new double[] {0.,1.,2.,3.,4.}));
+
     }
 
     private static double result(double[] marks) {
@@ -14,15 +15,20 @@ public class Double {
             mingi[i] = marks[i];
         }
         Arrays.sort(mingi);
+        System.out.println(Arrays.toString(mingi));
         double sum=0;
         double vastus;
         for (int i = 0; i < mingi.length-1; i++) {
             sum += mingi[i];
         }
-        vastus=sum/(mingi.length-2);
+        vastus=sum/(mingi.length-1);
+        System.out.println("vastus = " + vastus);
         return vastus;
 
     }
 
 
 }
+
+
+

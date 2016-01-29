@@ -5,7 +5,7 @@ import java.util.Arrays;
  */
 public class Array {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(mingi));
+
 
         int[] res = veeruMaxid(new int[][]{{1, 2, 6}, {4, 7, 5}});
 
@@ -20,7 +20,7 @@ public class Array {
 
         int uusMassiv[]= new int [koigePikkem];
         for (int i = 0; i < uusMassiv.length ; i++) {
-            uusMassiv=res;
+           // uusMassiv=res;
 
         }
         for (int i = 0; i < m.length ; i++) {
